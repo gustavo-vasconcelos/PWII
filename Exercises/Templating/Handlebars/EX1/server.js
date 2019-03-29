@@ -1,0 +1,11 @@
+let express = require("express")
+let exphbs = require("express-handlebars")
+let app = express()
+app.engine("handlebars", exphbs({ defaultLayout: "main" }))
+app.set("view engine", "handlebars")
+app.get("/", (req, res) => {
+    app.set("views", __dirname + "/src/views")
+    res.render("home")
+})
+console.log("Listening")
+app.listen(3000)
