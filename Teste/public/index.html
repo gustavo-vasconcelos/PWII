@@ -14,16 +14,22 @@
 
 <body>
     <div class="jumbotron mt-5">
-        <table class="table bordered table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                </tr>
-            </thead>
-            <tbody id="users">
-            </tbody>
+        <p>Users:</p>
+        <table class="table bordered table-hover" id="table">
+            
         </table>
+
+        <form class="mt-5" id="form">
+            <div class="mb-3">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <input type="submit" class="col-12 btn btn-primary">
+        </form>
     </div>
     <script src="js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
